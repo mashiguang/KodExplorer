@@ -555,13 +555,14 @@ class explorer extends Controller{
 
 		$result = array();
 		foreach ($treeData as $key => $value) { //为空则不展示
-			if( count($value['children'])<1 && 
-				in_array($key,array('myGroup','group')) ){//'fav'
+			if( /* count($value['children'])<1 &&  */
+				in_array($key,array('myGroup','group', 'fav', 'public')) ){//'fav'
 				continue;
 				//$value['isParent'] = false;
 			}
 			$result[] = $value;
 		}
+		write_log($result);
 		show_json($result);
 	}
 
