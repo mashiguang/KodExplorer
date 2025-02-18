@@ -503,7 +503,7 @@ function copy_dir($source, $dest){
 			$__dest = $dest;
 		}
 		$result = @copy($source,$__dest);
-		@chmod($__dest, 0777);
+		// @chmod($__dest, 0777);
 	}else if(is_dir($source)) {
 		if ($dest[strlen($dest)-1] == '/') {
 			$dest = $dest . basename($source);

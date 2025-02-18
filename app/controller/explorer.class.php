@@ -196,6 +196,22 @@ class explorer extends Controller{
 		return false;
 	}
 
+	public function copy(){
+
+		write_log('copy');
+		write_log($this->in);
+
+		if (!file_exists($this->in['from'])) {
+			show_json('fileNotExists',false);
+		}
+
+		if(copy_dir($this->in['from'], $this->in['to'])){
+			show_json('success',true);
+		}else{
+			show_json('error',false);
+		}
+	}
+
 	public function pathRname(){
 		$rnameTo=_DIR($this->in['rnameTo']);
 		if (file_exists($rnameTo) && 
