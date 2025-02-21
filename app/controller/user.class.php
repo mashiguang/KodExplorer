@@ -406,7 +406,7 @@ class user extends Controller{
 				'path'			=> "admin",
 				'password'		=> md5($this->in['password']),
 				'userID'		=> $root,
-				'role'			=> '1',
+				'role'			=> '2',
 				'config'		=> array('sizeMax'=>'0','sizeUse'=>1024),
 				'groupInfo'		=> array('1'=>'write'),
 				'createTime'	=> time(),
