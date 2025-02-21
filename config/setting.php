@@ -65,7 +65,8 @@ $config['settingSystemDefault'] = array(
 	'newGroupFolder'	=> "share,doc,pictures",	//新建分组默认建立文件夹
 	'groupShareFolder'	=> "share",
 	
-	'desktopFolder'		=> 'desktop',	// 桌面文件夹别名
+	// 'desktopFolder'		=> 'desktop',	// 桌面文件夹别名
+	'desktopFolder'		=> '',	// 桌面文件夹别名
 	'versionType'		=> "A",			// 版本
 	'rootListUser'		=> 0,			// 组织架构根节点展示群组内用户
 	'rootListGroup'		=> 0,			// 组织架构根节点展示子群组
